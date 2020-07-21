@@ -1,4 +1,3 @@
-
 memo ={}
 def fastFib(n,memo):
     """Assumes n is an int >= 0, memo used only by recursive calls
@@ -12,10 +11,15 @@ def fastFib(n,memo):
         memo[n] = result
         return result
     
-fastFib(8,memo)
+fastFib(34,memo)
+print(memo.values())
 sumfib = 0 
 for item in memo.values():
-    if item%2 == 0:
+    if item > 4000000:
+        print(item)
+        sumfib
+        break
+    elif item%2 == 0:
         sumfib += item
 
 print(sumfib)
