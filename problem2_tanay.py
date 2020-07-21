@@ -12,12 +12,10 @@ def fastFib(n,memo):
         return result
     
 fastFib(34,memo)
-print(memo.values())
+
 sumfib = 0 
 for item in memo.values():  #go through sequence and add even numbers until sequence exceeds 4 mil
     if item > 4000000:
-        print(item)
-        sumfib
         break
     elif item%2 == 0:
         sumfib += item
