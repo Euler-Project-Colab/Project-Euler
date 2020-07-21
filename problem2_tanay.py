@@ -4,17 +4,17 @@ def fastFib(n,memo):
        Returns Fibonacci of n"""
     if n == 0 or n == 1:
         return 1
-    try:
+    try: #check if value already calculated
         return memo[n]
     except KeyError:
         result = fastFib(n-1, memo) + fastFib(n-2, memo)
-        memo[n] = result
+        memo[n] = result #stores result in dict
         return result
     
 fastFib(34,memo)
 print(memo.values())
 sumfib = 0 
-for item in memo.values():
+for item in memo.values():  #go through sequence and add even numbers until sequence exceeds 4 mil
     if item > 4000000:
         print(item)
         sumfib
