@@ -20,3 +20,4 @@ for i in range(0,1000,15):
     sum=sum-i;
 print(sum)
 #Answer=233168
+#Using Arithmetic Progression would be a more viable way 
